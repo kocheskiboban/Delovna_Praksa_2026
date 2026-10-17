@@ -1,0 +1,12 @@
+# Ohrid Summer Festival
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /account/
+Disallow: /booking/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /database/
+Disallow: /tools/
+
+Sitemap: /sitemap.xml
