@@ -1,0 +1,48 @@
+.page-admin .newsletter-band, .page-admin .footer-sponsors { display: none; }
+.admin { display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 80vh; }
+.admin__side { background: var(--ink); color: #cfe0e2; padding: var(--s-5) var(--s-3); position: sticky; top: var(--header-h); height: calc(100vh - var(--header-h)); overflow-y: auto; }
+.admin__brand { display: flex; align-items: center; gap: .5rem; font-family: var(--font-display); font-size: var(--step-1); color: #fff; margin: 0 .6rem var(--s-4); }
+.admin__group { font-size: .8rem; color: #8fb0b6; margin: var(--s-4) .6rem .3rem; font-style: italic; font-family: var(--font-display); }
+.admin__side ul { list-style: none; padding: 0; margin: 0; }
+.admin__side a { display: flex; align-items: center; gap: .6rem; padding: .5rem .6rem; border-radius: var(--radius); color: #dce7e9; text-decoration: none; font-size: var(--step--1); }
+.admin__side a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.admin__side a[aria-current] { background: var(--ochre); color: var(--night); font-weight: 700; }
+.admin__badge { margin-left: auto; background: #e07b72; color: #fff; border-radius: 999px; padding: 0 .45rem; font-size: .75rem; font-weight: 700; }
+.admin__main { padding: var(--s-5) var(--s-6) var(--s-8); min-width: 0; }
+.admin__head h1 { font-size: var(--step-3); }
+.admin-toolbar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between; margin-bottom: var(--s-4); }
+.admin-filters { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.admin-filters .search-input { min-height: 42px; width: auto; min-width: 200px; }
+.admin-filters .select .search-input { padding-right: 2.2rem; appearance: none; }
+.admin-thumb { width: 64px; height: 44px; object-fit: cover; border-radius: 4px; }
+.row-actions { display: flex; gap: .15rem; align-items: center; white-space: nowrap; }
+.row-actions form { margin: 0; }
+.row-actions .icon-btn { width: 34px; height: 34px; }
+.icon-btn--danger:hover { color: var(--red); background: var(--red-soft); }
+.swatch { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: -3px; }
+.admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--s-5); }
+.bar-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
+.bar-list li { display: grid; grid-template-columns: 1fr; gap: .2rem; font-size: var(--step--1); }
+.bar { display: block; height: 8px; border-radius: 4px; background: var(--pearl-2); overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--lake); }
+.col-chart { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 4px; border-bottom: 1px solid var(--line); }
+.col-chart span { flex: 1; background: var(--lake-2); border-radius: 3px 3px 0 0; min-height: 2px; position: relative; }
+.col-chart em { position: absolute; top: -1.2rem; left: 50%; transform: translateX(-50%); font-size: .65rem; font-style: normal; color: var(--muted); }
+.admin-form .tabs button { cursor: pointer; }
+.performers-field { border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s-4); }
+.performers-field legend { font-weight: 700; padding: 0 .4rem; }
+.performer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .5rem 1rem; }
+.performer-grid label { display: flex; justify-content: space-between; align-items: center; gap: .5rem; font-size: var(--step--1); border-bottom: 1px dotted var(--line); padding: .25rem 0; }
+.performer-grid select { min-height: 34px; border-radius: 6px; border: 1px solid var(--line-strong); }
+.image-field { display: grid; grid-template-columns: auto 1fr 1fr; gap: var(--s-4); align-items: start; }
+.image-field__preview { width: 200px; border-radius: var(--radius); border: 1px solid var(--line); }
+.admin-sticky-actions { position: sticky; bottom: 0; background: var(--pearl); padding: var(--s-3) 0; border-top: 1px solid var(--line); z-index: 5; }
+.inline-form select { min-height: 34px; border-radius: 6px; border: 1px solid var(--line-strong); padding: 0 .4rem; }
+@media (max-width: 1023px) {
+  .admin { grid-template-columns: 1fr; }
+  .admin__side { position: static; height: auto; padding: var(--s-3); }
+  .admin__side ul { display: flex; flex-wrap: wrap; gap: .2rem; }
+  .admin__group { width: 100%; margin: .5rem .3rem .2rem; }
+  .admin__main { padding: var(--s-4) var(--s-3) var(--s-7); }
+  .image-field { grid-template-columns: 1fr; }
+}
